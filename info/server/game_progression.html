@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            color: white
+        }
+    </style>
+</head>
+<body>
+<p>
+    The game server will send information about the game details such as player details, environmental
+    details and collectible details to all connected clients every one second.
+    <br>
+    <!--G:P1;< player location x>,< player location y>;<Direction>;< whether shot>;<health>;< coins>;<points>: …. P5;< player location x>,< player location y>;<Direction>;< whether shot>;<health>;<coins>;< points>: < x>,<y>,<damage-level>;< x>,<y>,<damage-level>;< x>,<y>,<damagelevel>;< x>,<y>,<damage-level>…..< x>,<y>,<damage-level>#-->
+    This message will contain information about all the connected players (position, health, direction,
+    coins, points, whether shot a bullet) and the damage details of the brick walls.
+</p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            color: white
+        }
+    </style>
+</head>
+<body>
+<p>
+    The client can move in the map or shoot the cannon of its tank by sending the following messages
+    to the tank. The client can issue one command of the commands per second to the game server.
+<ul>
+    <dl>
+        <dt>UP#</dt>
+        <dt>DOWN#</dt>
+        <dt>RIGHT#</dt>
+        <dt>LEFT#</dt>
+        <dt>SHOOT#</dt>
+    </dl>
+</ul>
+<ul>
+    <li>If the request direction is the same as the current direction, the server will try to move the client
+        in the said direction. Otherwise the tank will be rotated to face the requested direction
+    </li>
+    <li>The bullet will be fired in the direction the tank was facing when it fired the bullet.</li>
+
+</ul>
+</p>
+<p>
+    If the request cannot be honored due to some reason, the corresponding client will be notified of
+    the situation using the following messages
+<ul>
+    <dl>
+        <dt>OBSTACLE#</dt>
+        <dt>CELL_OCCUPIED#</dt>
+        <dt>DEAD#</dt>
+        <dt>TOO_QUICK#</dt>
+        <dt>INVALID_CELL#</dt>
+        <dt>GAME_HAS_FINISHED#</dt>
+        <dt>GAME_NOT_STARTED_YET#</dt>
+        <dt>NOT_A_VALID_CONTESTANT#</dt>
+    </dl>
+</ul>
+</p>
+</body>
+</html>

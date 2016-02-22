@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TankGame | Gallery</title>
+    <link rel="shortcut icon" href="icons/logo.ico"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* page layout */
+        body {
+            padding-top: 100px;
+            background-color: black;
+            color: white;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+
+        /* css3 photo gallery styles */
+        .gallery {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .gallery a {
+            display: inline-block;
+            height: 300px;
+            position: relative;
+            width: 400px;
+        }
+
+        .gallery a img {
+            border: 2px solid #fff;
+            cursor: pointer;
+            display: block;
+            height: 100%;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: 1;
+
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+            -webkit-transition-property: width, height, top, bottom, left, right, z-index, border;
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-property: width, height, top, bottom, left, right, z-index, border;
+            -moz-transition-duration: 0.5s;
+            -o-transition-property: width, height, top, bottom, left, right, z-index, border;
+            -o-transition-duration: 0.5s;
+            transition-property: width, height, top, bottom, left, right, z-index, border;
+            transition-duration: 0.5s;
+        }
+
+        .gallery a:focus img {
+            border: 5px solid #fff;
+            cursor: default;
+            height: 150%;
+            position: absolute;
+            width: 150%;
+            z-index: 25;
+
+            box-shadow: 1px 1px 5px #888;
+            -moz-box-shadow: 1px 1px 5px #888;
+            -webkit-box-shadow: 1px 1px 5px #888;
+            -webkit-transition-property: width, height, top, bottom, left, right, z-index, border;
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-property: width, height, top, bottom, left, right, z-index, border;
+            -moz-transition-duration: 0.5s;
+            -o-transition-property: width, height, top, bottom, left, right, z-index, border;
+            -o-transition-duration: 0.5s;
+            transition-property: width, height, top, bottom, left, right, z-index, border;
+            transition-duration: 0.5s;
+        }
+
+        /* custom focus rules */
+        .gallery a:focus:nth-child(3n+1) img {
+            left: 150px;
+        }
+
+        .gallery a:focus:nth-child(3n+2) img {
+            left: -50px;
+        }
+
+        .gallery a:focus:nth-child(3n+3) img {
+            left: -250px;
+        }
+
+        .gallery a:focus:nth-child(-n+3) img {
+            top: 140px;
+        }
+
+        .gallery a:focus:nth-child(n+7) img {
+            top: -150px;
+        }
+
+        .gallery a:focus:nth-child(n+10) img {
+            top: -295px;
+        }
+
+        /* extra close layer */
+        .gallery .close {
+            background: transparent;
+            cursor: pointer;
+            display: none;
+            height: 352px;
+            left: 170px;
+            position: absolute;
+            top: 160px;
+            width: 500px;
+            z-index: 30;
+        }
+
+        .gallery a:focus ~ .close {
+            display: block;
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home.html">
+                <img src="img/logo_brand.png" alt="techduo">
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="info.html">Developer</a>
+                </li>
+                <li>
+                    <a href="wiki.html">Information</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+
+<div class="container" id="container">
+    <div class="gallery">
+        <a tabindex="1"><img src="img/image002.jpg"></a>
+        <a tabindex="1"><img src="img/image013.jpg"></a>
+        <span class="close"></span>
+    </div>
+</div>
+<!-- /.container -->
+
+<!-- jQuery Version 1.11.1 -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            color: white
+        }
+    </style>
+</head>
+<body>
+<p>
+<ul>
+    <li>A timer is initiated when the first player registers for a game (10 seconds).</li>
+    <li>When the 5th player joins the game or in the event of the timer expiring, the server will issue the
+        following game starting message to all the players that are already registered with the server.
+    </li>
+    S:P&ltnum&gt; &lt player location x&gt,&lt player location y&gt;&ltDirection&gt#
+    <p>
+        The reply contains the client identifier, initial coordinates and
+        the direction which the tank will be facing initially.
+        <br>
+        The tank can have 4 directions,
+    <ul>
+        <li>0 - North</li>
+        <li>1 - East</li>
+        <li>2 - South</li>
+        <li>3 - West</li>
+    </ul>
+</p>
+<li>Any join request by a client hereafter until the end of the game instance will be rejected.</li>
+</ul>
+</p>
+</body>
+</html>
